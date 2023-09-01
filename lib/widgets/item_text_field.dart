@@ -10,17 +10,20 @@ class ItemTextField extends StatefulWidget {
   final double? width;
   final TextInputType? inputType;
   final double? padding;
+  final Function(String)? onChangeValue;
 
-  ItemTextField(
-      {super.key,
-      required this.controller,
-      this.label,
-      this.hint = '',
-      this.prefixIcon,
-      this.height = 40,
-      this.width = 100,
-      this.inputType = TextInputType.text,
-      this.padding = 0});
+  ItemTextField({
+    super.key,
+    required this.controller,
+    this.label,
+    this.hint = '',
+    this.prefixIcon,
+    this.height = 40,
+    this.width = 100,
+    this.inputType = TextInputType.text,
+    this.padding = 0,
+    this.onChangeValue,
+  });
 
   @override
   State<ItemTextField> createState() => _ItemTextFieldState();
@@ -39,6 +42,14 @@ class _ItemTextFieldState extends State<ItemTextField> {
         style: GoogleFonts.robotoFlex(
           fontSize: 14,
         ),
+        onChanged: widget.onChangeValue ??
+            (value) {
+              setState(() {
+                widget.onChangeValue?.call(value);
+                // labelcolor =
+                //     value.isNotEmpty ? PiColors.warmPurple : PiColors.grey;
+              });
+            },
         decoration: InputDecoration(
           label: Text(
             widget.label ?? '',

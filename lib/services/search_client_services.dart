@@ -4,7 +4,7 @@ import 'package:stacked/stacked.dart';
 class SearchClientServices with ReactiveServiceMixin {
   final clients = ReactiveValue<dynamic>(null);
 
-  getClients() async {
+  Stream<dynamic> getClients() {
     clients.value =
         FirebaseFirestore.instance.collection("Clientes").snapshots();
     return clients.value;
