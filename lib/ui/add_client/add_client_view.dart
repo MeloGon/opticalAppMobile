@@ -172,7 +172,7 @@ class AddClientView extends StatelessWidget {
                       children: [
                         Text(
                           'Lejos ',
-                          style: CustomStyles.styleGeneral,
+                          style: CustomStyles.styleSecondary,
                         ),
                         ItemTextField(
                           padding: 2,

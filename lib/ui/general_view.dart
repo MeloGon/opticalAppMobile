@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:optical_app_v2/res/custom_colors.dart';
 import 'package:optical_app_v2/res/custom_strings.dart';
 import 'package:optical_app_v2/ui/add_client/add_client_view.dart';
+import 'package:optical_app_v2/ui/search_client/search_client_view.dart';
 import 'package:optical_app_v2/widgets/item_text_field.dart';
 
 class GeneralView extends StatefulWidget {
@@ -15,12 +16,8 @@ class _GeneralViewState extends State<GeneralView> {
   int _currentIndex = 0;
 
   final List<Widget> _pages = [
-    AddClientView(),
-    Container(
-      width: 100,
-      height: 100,
-      color: Colors.blue,
-    ),
+    const AddClientView(),
+    const SearchClientView(),
     Container(
       width: 200,
       height: 100,

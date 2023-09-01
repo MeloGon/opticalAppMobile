@@ -1,4 +1,4 @@
-package com.example.optical_app_v2
+package com.hazarddevs.opticalapp
 
 import io.flutter.embedding.android.FlutterActivity
 

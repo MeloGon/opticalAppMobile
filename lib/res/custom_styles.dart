@@ -4,4 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 class CustomStyles {
   static TextStyle styleGeneral =
       GoogleFonts.robotoFlex(fontSize: 14, color: Colors.black87);
+
+  static TextStyle styleSecondary =
+      GoogleFonts.robotoFlex(fontSize: 14, color: Colors.black87);
 }
