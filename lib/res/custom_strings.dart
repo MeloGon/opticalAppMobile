@@ -9,4 +9,7 @@ class CustomString {
   static const String obsTx = 'Observaciones';
   static const String clearFormTx = 'Limpiar formulario';
   static const String saveClientTx = 'Guardar cliente';
+  static const String measureRightEyeTx = 'MEDIDA DEL OJO DERECHO';
+  static const String measureLeftEyeTx = 'MEDIDA DEL OJO IZQUIERDA';
+  static const String measureDpEyeTx = 'DP';
 }
