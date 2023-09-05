@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:optical_app_v2/res/custom_colors.dart';
 import 'package:optical_app_v2/res/custom_strings.dart';
+import 'package:optical_app_v2/res/custom_styles.dart';
 import 'package:optical_app_v2/ui/add_client/add_client_view.dart';
 import 'package:optical_app_v2/ui/search_client/search_client_view.dart';
 import 'package:optical_app_v2/widgets/item_text_field.dart';
@@ -18,20 +19,18 @@ class _GeneralViewState extends State<GeneralView> {
   final List<Widget> _pages = [
     const AddClientView(),
     const SearchClientView(),
-    Container(
-      width: 200,
-      height: 100,
-      color: Colors.green,
-      // child: PicashTextField(
-      //   label: 'Ad',
-      //   controller: TextEditingController(),
-      // ),
-    ),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Text('Tu Vision', style: styleTitleAppBar)),
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+      ),
       body: IndexedStack(
         index: _currentIndex,
         children: _pages,
@@ -46,10 +45,6 @@ class _GeneralViewState extends State<GeneralView> {
           BottomNavigationBarItem(
             icon: Icon(Icons.search_rounded),
             label: CustomString.searchClientTx,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: CustomString.settingsTx,
           ),
         ],
         onTap: (int index) {
