@@ -1,5 +1,6 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:optical_app_v2/models/client.dart';
+import 'package:optical_app_v2/ui/search_client/local_widgets/client_card.dart';
 import 'package:optical_app_v2/ui/search_client/search_client_view_model.dart';
 import 'package:optical_app_v2/widgets/item_text_field.dart';
 import 'package:stacked/stacked.dart';
@@ -56,9 +57,11 @@ class _SearchClientViewState extends State<SearchClientView> {
                                     .data()["nombre_cli"]
                                     .toLowerCase()
                                     .contains(searchResult ?? '')) {
-                                  return SizedBox(
-                                      child: Text(
-                                          '${snapshot.data?.docs[index]['nombre_cli']}'));
+                                  final client = Client.fromDocumentSnapshot(
+                                      snapshot.data?.docs[index]);
+                                  return ClientCard(
+                                    client: client,
+                                  );
                                 } else {
                                   return const Visibility(
                                     visible: false,

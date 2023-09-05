@@ -34,7 +34,7 @@ class AddClientView extends StatelessWidget {
                       avatar: const Icon(CupertinoIcons.calendar_today),
                       label: Text(
                         /* DateFormat('yyyy-MM-dd').format(selectedDate) */ '10/09/2023',
-                        style: CustomStyles.styleGeneral,
+                        style: styleGeneral,
                       ),
                     ),
                     ElevatedButton(
@@ -161,9 +161,9 @@ class AddClientView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         const Text(''),
-                        Text('ESF', style: CustomStyles.styleGeneral),
-                        Text('CIL', style: CustomStyles.styleGeneral),
-                        Text('EJE', style: CustomStyles.styleGeneral),
+                        Text('ESF', style: styleGeneral),
+                        Text('CIL', style: styleGeneral),
+                        Text('EJE', style: styleGeneral),
                       ],
                     ),
                     Row(
@@ -172,7 +172,7 @@ class AddClientView extends StatelessWidget {
                       children: [
                         Text(
                           'Lejos ',
-                          style: CustomStyles.styleSecondary,
+                          style: styleSecondary,
                         ),
                         ItemTextField(
                           padding: 2,
@@ -203,7 +203,7 @@ class AddClientView extends StatelessWidget {
                       children: [
                         Text(
                           'Cerca',
-                          style: CustomStyles.styleGeneral,
+                          style: styleGeneral,
                         ),
                         ItemTextField(
                           padding: 2,
@@ -234,7 +234,7 @@ class AddClientView extends StatelessWidget {
                       children: [
                         Text(
                           'ADD',
-                          style: CustomStyles.styleGeneral,
+                          style: styleGeneral,
                         ),
                         ItemTextField(
                           padding: 2,
@@ -259,44 +259,16 @@ class AddClientView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         const Text(''),
-                        Text('ESF', style: CustomStyles.styleGeneral),
-                        Text('CIL', style: CustomStyles.styleGeneral),
-                        Text('EJE', style: CustomStyles.styleGeneral),
+                        Text('ESF', style: styleGeneral),
+                        Text('CIL', style: styleGeneral),
+                        Text('EJE', style: styleGeneral),
                       ],
                     ),
                     Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Lejos ', style: CustomStyles.styleGeneral),
-                        ItemTextField(
-                          padding: 2,
-                          width: size.width * .2,
-                          height: 30.0,
-                          controller: TextEditingController(),
-                          inputType: TextInputType.phone,
-                        ),
-                        ItemTextField(
-                          padding: 2,
-                          width: size.width * .2,
-                          height: 30.0,
-                          controller: TextEditingController(),
-                          inputType: TextInputType.phone,
-                        ),
-                        ItemTextField(
-                          padding: 2,
-                          width: size.width * .2,
-                          height: 30.0,
-                          controller: TextEditingController(),
-                          inputType: TextInputType.phone,
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text('Cerca', style: CustomStyles.styleGeneral),
+                        Text('Lejos ', style: styleGeneral),
                         ItemTextField(
                           padding: 2,
                           width: size.width * .2,
@@ -324,7 +296,35 @@ class AddClientView extends StatelessWidget {
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('ADD', style: CustomStyles.styleGeneral),
+                        Text('Cerca', style: styleGeneral),
+                        ItemTextField(
+                          padding: 2,
+                          width: size.width * .2,
+                          height: 30.0,
+                          controller: TextEditingController(),
+                          inputType: TextInputType.phone,
+                        ),
+                        ItemTextField(
+                          padding: 2,
+                          width: size.width * .2,
+                          height: 30.0,
+                          controller: TextEditingController(),
+                          inputType: TextInputType.phone,
+                        ),
+                        ItemTextField(
+                          padding: 2,
+                          width: size.width * .2,
+                          height: 30.0,
+                          controller: TextEditingController(),
+                          inputType: TextInputType.phone,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('ADD', style: styleGeneral),
                         ItemTextField(
                           padding: 2,
                           width: size.width * .2,
@@ -348,16 +348,16 @@ class AddClientView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         const Text(''),
-                        Text('DER', style: CustomStyles.styleGeneral),
-                        Text('IZQ', style: CustomStyles.styleGeneral),
-                        Text('TOTAL', style: CustomStyles.styleGeneral),
+                        Text('DER', style: styleGeneral),
+                        Text('IZQ', style: styleGeneral),
+                        Text('TOTAL', style: styleGeneral),
                       ],
                     ),
                     Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('DP', style: CustomStyles.styleGeneral),
+                        Text('DP', style: styleGeneral),
                         ItemTextField(
                           padding: 2,
                           width: size.width * .2,
