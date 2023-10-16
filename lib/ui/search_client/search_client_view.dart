@@ -77,7 +77,6 @@ class _SearchClientViewState extends State<SearchClientView> {
                 ),
               ],
             ),
-            //child: ListView.builder(itemBuilder: itemBuilder),
           );
         });
   }

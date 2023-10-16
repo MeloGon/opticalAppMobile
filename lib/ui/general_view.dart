@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:optical_app_v2/res/custom_colors.dart';
 import 'package:optical_app_v2/res/custom_strings.dart';
 import 'package:optical_app_v2/res/custom_styles.dart';
 import 'package:optical_app_v2/ui/add_client/add_client_view.dart';
 import 'package:optical_app_v2/ui/search_client/search_client_view.dart';
-import 'package:optical_app_v2/widgets/item_text_field.dart';
 
 class GeneralView extends StatefulWidget {
   const GeneralView({super.key});
