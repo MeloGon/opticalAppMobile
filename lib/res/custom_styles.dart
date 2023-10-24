@@ -19,3 +19,9 @@ TextStyle styleWhiteBold = GoogleFonts.roboto(
 
 TextStyle styleWhiteSecondary =
     GoogleFonts.robotoFlex(fontSize: 14, color: Colors.white);
+
+TextStyle styleRedSecondary =
+    GoogleFonts.robotoFlex(fontSize: 14, color: Colors.redAccent);
+
+TextStyle styleGreySecondary =
+    GoogleFonts.robotoFlex(fontSize: 14, color: Colors.grey);

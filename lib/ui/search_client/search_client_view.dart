@@ -22,8 +22,7 @@ class _SearchClientViewState extends State<SearchClientView> {
         viewModelBuilder: () => SearchClientViewModel(),
         builder: (context, model, _) {
           return Container(
-            padding:
-                const EdgeInsets.only(top: 80, bottom: 20, left: 20, right: 20),
+            padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
             width: MediaQuery.sizeOf(context).width,
             height: MediaQuery.sizeOf(context).height,
             child: Column(

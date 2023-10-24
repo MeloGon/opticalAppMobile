@@ -9,4 +9,13 @@ class SearchClientServices with ReactiveServiceMixin {
         FirebaseFirestore.instance.collection("Clientes").snapshots();
     return clients.value;
   }
+
+  deleteClient(String idClient) async {
+    try {
+      FirebaseFirestore.instance.collection("Clientes").doc(idClient).delete();
+      print('Cliente borrado con exito');
+    } catch (e) {
+      print('error $e');
+    }
+  }
 }

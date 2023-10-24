@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:optical_app_v2/res/custom_colors.dart';
 import 'package:optical_app_v2/res/custom_strings.dart';
 import 'package:optical_app_v2/res/custom_styles.dart';
 import 'package:optical_app_v2/ui/add_client/add_client_view.dart';
@@ -34,6 +35,8 @@ class _GeneralViewState extends State<GeneralView> {
         children: _pages,
       ),
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: CustomColors.blue_004CE6,
+        unselectedItemColor: CustomColors.grey_E1E4E9,
         currentIndex: _currentIndex,
         items: const [
           BottomNavigationBarItem(

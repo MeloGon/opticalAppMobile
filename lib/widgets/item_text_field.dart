@@ -38,6 +38,7 @@ class _ItemTextFieldState extends State<ItemTextField> {
       height: widget.height,
       width: widget.width,
       child: TextField(
+        keyboardType: widget.inputType,
         controller: widget.controller,
         style: GoogleFonts.robotoFlex(
           fontSize: 14,

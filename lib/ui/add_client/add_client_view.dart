@@ -87,6 +87,7 @@ class AddClientView extends StatelessWidget {
                         controller: model.celCli,
                         label: 'Número telefónico del cliente',
                         prefixIcon: const Icon(Icons.phone_android),
+                        inputType: TextInputType.phone,
                       ),
                       space(height: 15),
                       ItemTextField(
@@ -101,6 +102,7 @@ class AddClientView extends StatelessWidget {
                         controller: model.edadCli,
                         label: 'Edad',
                         prefixIcon: const Icon(Icons.medical_information),
+                        inputType: TextInputType.phone,
                       ),
                       space(height: 15),
                       HeaderWidget(
@@ -344,8 +346,7 @@ class AddClientView extends StatelessWidget {
                           icon: const Icon(CupertinoIcons.text_bubble_fill)),
                       TextField(
                         controller: model.obsCli,
-                        maxLines: 10,
-                        //style: styleGeneral,
+                        maxLines: 4,
                         textCapitalization: TextCapitalization.sentences,
                         decoration: const InputDecoration(
                             labelText: CustomString.obsTx,

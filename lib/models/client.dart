@@ -4,6 +4,7 @@ class Client {
   String? userId;
   String? dateCreated;
   String? name;
+  String? edad;
   String? numberPhone;
   String? vendeCli;
   String? odEsfLe;
@@ -28,6 +29,7 @@ class Client {
     this.userId,
     this.dateCreated,
     this.name,
+    this.edad,
     this.numberPhone,
     this.vendeCli,
     this.odEsfLe,
@@ -54,6 +56,7 @@ class Client {
       userId: json['userId'],
       dateCreated: json['fecha_cli'],
       name: json['nombre_cli'],
+      edad: json['edad_cli'],
       numberPhone: json['cel_cli'],
       vendeCli: json['vende_cli'],
       odEsfLe: json['od_esf_le'],

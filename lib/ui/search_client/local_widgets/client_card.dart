@@ -43,28 +43,61 @@ class ClientCard extends ViewModelWidget<SearchClientViewModel> {
               ),
             ),
             ExpansionTile(
+              onExpansionChanged: viewModel.isExpandedEvent,
               backgroundColor: Colors.white,
               title: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Row(
                     children: <Widget>[
-                      Text("Nombre : ", style: styleWhiteBold),
-                      Text(client?.name ?? '', style: styleWhiteSecondary),
+                      Text("Nombre : ",
+                          style: viewModel.isExpanded
+                              ? styleBold
+                              : styleWhiteBold),
+                      Text(client?.name ?? '',
+                          style: viewModel.isExpanded
+                              ? styleBold
+                              : styleWhiteSecondary),
                     ],
                   ),
                   Row(
                     children: <Widget>[
-                      Text("Celular : ", style: styleWhiteBold),
+                      Text("Celular : ",
+                          style: viewModel.isExpanded
+                              ? styleBold
+                              : styleWhiteBold),
                       Text(client?.numberPhone ?? '',
-                          style: styleWhiteSecondary),
+                          style: viewModel.isExpanded
+                              ? styleBold
+                              : styleWhiteSecondary),
                     ],
                   ),
-                  Text(client?.dateCreated ?? '', style: styleWhiteSecondary),
+                  Row(
+                    children: <Widget>[
+                      Text("Edad : ",
+                          style: viewModel.isExpanded
+                              ? styleBold
+                              : styleWhiteBold),
+                      Text(client?.edad ?? '',
+                          style: viewModel.isExpanded
+                              ? styleBold
+                              : styleWhiteSecondary),
+                    ],
+                  ),
+                  Text(client?.dateCreated ?? '',
+                      style: viewModel.isExpanded
+                          ? styleBold
+                          : styleWhiteSecondary),
                 ],
               ),
-              trailing: SizedBox(),
+              trailing: viewModel.isExpanded
+                  ? Icon(
+                      Icons.keyboard_arrow_up_rounded,
+                      color: CustomColors.blue_004CE6,
+                    )
+                  : const SizedBox(),
               children: <Widget>[
+                const Divider(),
                 Text(CustomString.measureRightEyeTx, style: styleBold),
                 Padding(
                   padding: const EdgeInsets.symmetric(
@@ -147,6 +180,15 @@ class ClientCard extends ViewModelWidget<SearchClientViewModel> {
                           const Text('   '),
                           Text("Total : ", style: styleBold),
                           Text(client?.totalDp ?? ' -- ', style: styleGeneral),
+                          // TextButton(onPressed: null, child: Text('Eliminar'))
+                          const Spacer(),
+                          IconButton(
+                              onPressed: () => viewModel.deleteClientDialog(
+                                  context, client?.userId),
+                              icon: Icon(
+                                Icons.delete_outline_rounded,
+                                color: Colors.redAccent,
+                              ))
                         ],
                       ),
                     ],
