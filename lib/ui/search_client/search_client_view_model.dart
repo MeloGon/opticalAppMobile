@@ -14,8 +14,8 @@ class SearchClientViewModel extends BaseViewModel {
     clients = _searchClientServices.getClients();
   }
 
-  deleteClient(String userId) {
-    _searchClientServices.deleteClient(userId);
+  deleteClient(String userId, BuildContext context) {
+    _searchClientServices.deleteClient(userId, context);
   }
 
   SearchClientViewModel() {
@@ -39,7 +39,7 @@ class SearchClientViewModel extends BaseViewModel {
           actions: <Widget>[
             // Botones o acciones en el cuadro de diálogo
             TextButton(
-              onPressed: () => deleteClient(userId!),
+              onPressed: () => deleteClient(userId!, context),
               child: Text(
                 'Eliminar',
                 style: styleRedSecondary,

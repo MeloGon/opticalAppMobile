@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
 class SearchClientServices with ReactiveServiceMixin {
@@ -10,9 +11,10 @@ class SearchClientServices with ReactiveServiceMixin {
     return clients.value;
   }
 
-  deleteClient(String idClient) async {
+  deleteClient(String idClient, BuildContext context) async {
     try {
       FirebaseFirestore.instance.collection("Clientes").doc(idClient).delete();
+      Navigator.pop(context);
       print('Cliente borrado con exito');
     } catch (e) {
       print('error $e');
