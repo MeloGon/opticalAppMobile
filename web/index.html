@@ -32,6 +32,30 @@
   <title>optical_app_v2</title>
   <link rel="manifest" href="manifest.json">
 
+  <script type="module">
+      // Import the functions you need from the SDKs you need
+    import { initializeApp } from "firebase/app";
+    import { getAnalytics } from "firebase/analytics";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBNtOHvmkTsmwWwLRFy8XhlCSJ1J4pXkA4",
+      authDomain: "tuvision-21b46.firebaseapp.com",
+      projectId: "tuvision-21b46",
+      storageBucket: "tuvision-21b46.appspot.com",
+      messagingSenderId: "728626471149",
+      appId: "1:728626471149:web:58e490e9cad194aa61ece4",
+      measurementId: "G-DXRXQY5VKQ"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
   <script>
     // The value below is injected by flutter build, do not touch.
     var serviceWorkerVersion = null;

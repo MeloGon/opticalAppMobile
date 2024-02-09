@@ -6,7 +6,12 @@ import 'package:optical_app_v2/ui/general_view.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   setupLocator();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+      options: const FirebaseOptions(
+          apiKey: 'AIzaSyBNtOHvmkTsmwWwLRFy8XhlCSJ1J4pXkA4',
+          appId: "1:728626471149:web:58e490e9cad194aa61ece4",
+          messagingSenderId: "728626471149",
+          projectId: "tuvision-21b46"));
   runApp(const MyApp());
 }
 
